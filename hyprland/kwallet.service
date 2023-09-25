@@ -1,0 +1,8 @@
+[Unit]
+Description=KDE Wallet Servcie
+
+[Service]
+ExecStart=/usr/bin/kwalletd5
+
+[Install]
+WantedBy=default.target

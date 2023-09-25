@@ -1,0 +1,87 @@
+{
+      "layer": "top",
+      "position": "top",
+      "height": 35,
+      "modules-left": ["custom/launcher", "wlr/workspaces", "temperature", "custom/wall"],
+      "modules-center": [
+        "clock"
+      ],
+      "modules-right": [
+        "wireplumber",
+        "backlight",
+        "battery",
+        "custom/powermenu",
+        "tray"
+      ],
+      "custom/launcher": {
+        "format": " ",
+        "tooltip": false
+      },
+      "custom/wall": {
+        "on-click": "~/.config/hypr/swww-change.sh",
+        "format": "󰠖 ",
+        "tooltip": false
+      },
+      "wlr/workspaces": {
+        "format": "{icon}",
+        "on-click": "activate"
+      },
+      "idle_inhibitor": {
+        "format": "{icon}",
+        "format-icons": {
+          "activated": "",
+          "deactivated": "",
+        },
+        "tooltip": false
+      },
+      "backlight": {
+        "device": "amdgpu_bl0",
+        "on-click": "/usr/bin/brightnessctl set 180",
+        "on-scroll-up": "/usr/bin/brightnessctl set +1%",
+        "on-scroll-down": "/usr/bin/brightnessctl set 1%-",
+        "format": "{icon} {percent}%",
+        "format-icons": ["󰃝", "󰃞", "󰃟", "󰃠"]
+      },
+      "wireplumber": {
+        "scroll-step": 1,
+        "format": "{icon} {volume}%",
+        "format-muted": "󰖁 Muted",
+        "format-icons": {
+          "default": ["", "", ""]
+        },
+        "on-click": "/usr/bin/amixer sset Master toggle",
+        "on-click-middle": "/usr/bin/pavucontrol",
+        "tooltip": false
+      },
+      "battery": {
+        "interval": 10,
+        "states": {
+          "warning": 20,
+          "critical": 10
+        },
+        "format": "{icon} {capacity}%",
+        "format-icons": ["󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
+        "format-full": "{icon} {capacity}%",
+        "format-charging": "󰂄 {capacity}%",
+        "tooltip": false
+      },
+      "clock": {
+        "interval": 60,
+        "format": "{:%I:%M %p  %A %b %d}",
+        "tooltip": true,
+        "tooltip-format": "Arch\n\n<tt>{calendar}</tt>"
+      },
+      "temperature": {
+        "tooltip": false,
+        "format": " {temperatureC}°C"
+      },
+      "custom/powermenu": {
+        "format": "",
+        "on-click": "/usr/bin/wlogout",
+        "tooltip": false
+      },
+      "tray": {
+        "icon-size": 15,
+        "spacing": 5
+      }
+    }

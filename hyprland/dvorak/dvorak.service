@@ -1,0 +1,8 @@
+[Unit]
+Description=Dvorak Virtual Keyboard
+
+[Service]
+ExecStart=/usr/local/bin/dvorak -d /dev/input/by-path/platform-i8042-serio-0-event-kbd -m "AT Translated Set 2 keyboard"
+
+[Install]
+WantedBy=default.target

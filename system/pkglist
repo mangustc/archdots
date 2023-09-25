@@ -1,0 +1,9 @@
+sudo
+git
+networkmanager
+amd-ucode
+base
+base-devel
+linux-firmware
+ripgrep
+tldr

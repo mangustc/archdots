@@ -1,0 +1,4 @@
+shfmt
+black
+clang-format
+stylua

@@ -1,0 +1,8 @@
+gtk4
+gtk3
+gtk2
+dconf
+gsettings-desktop-schemas
+gnome-settings-daemon
+catppuccin-gtk-theme-mocha
+paper-icon-theme
