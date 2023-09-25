@@ -43,3 +43,7 @@ cd ..
 cd ./misc
 sh ./install.sh
 cd ..
+
+cd ./firefox
+sh ./install.sh
+cd ..
