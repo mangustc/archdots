@@ -2,7 +2,7 @@
       "layer": "top",
       "position": "top",
       "height": 35,
-      "modules-left": ["custom/launcher", "wlr/workspaces", "temperature", "custom/wall"],
+      "modules-left": ["custom/launcher", "hyprland/workspaces", "temperature", "custom/wall"],
       "modules-center": [
         "clock"
       ],
@@ -22,8 +22,8 @@
         "format": "󰠖 ",
         "tooltip": false
       },
-      "wlr/workspaces": {
-        "format": "{icon}",
+      "hyprland/workspaces": {
+        "format": "{name}",
         "on-click": "activate"
       },
       "idle_inhibitor": {
