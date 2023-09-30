@@ -4,6 +4,8 @@ networkmanager
 amd-ucode
 base
 base-devel
+linux-zen-
+linux-zen-headers
 linux-firmware
 ripgrep
 tldr

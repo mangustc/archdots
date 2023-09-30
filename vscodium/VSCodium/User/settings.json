@@ -1,0 +1,21 @@
+{
+    "extensions.experimental.affinity": {
+        "asvetliakov.vscode-neovim": 1
+    },
+    "vscode-neovim.neovimInitVimPaths.linux": "~/.config/VSCodium/init.lua",
+    "editor.fontSize": 18,
+    "window.menuBarVisibility": "toggle",
+    "workbench.colorTheme": "Catppuccin Mocha",
+    "workbench.iconTheme": "catppuccin-mocha",
+    "editor.fontFamily": "'JetBrainsMono Nerd Font', 'monospace', monospace",
+    "keyboard.dispatch": "keyCode",
+    "redhat.telemetry.enabled": false,
+    "git.openRepositoryInParentFolders": "never",
+    "editor.formatOnSave": true,
+    "editor.inlayHints.enabled": "offUnlessPressed",
+    "[java]": {
+        "editor.defaultFormatter": "redhat.java",
+        "editor.suggest.snippetsPreventQuickSuggestions": false
+    },
+    "editor.suggest.selectionMode": "never"
+}
