@@ -16,6 +16,16 @@
         "when": "editorTextFocus && neovim.ctrlKeysNormal && neovim.init && neovim.mode != 'insert'"
     },
     {
+        "key": "space p",
+        "command": "java.view.package.renameFile",
+        "when": "focusedView == 'javaProjectExplorer' && java:serverMode == 'Standard' && editorTextFocus && neovim.ctrlKeysNormal && neovim.init && neovim.mode != 'insert'"
+    },
+    {
+        "key": "space p",
+        "command": "editor.action.rename",
+        "when": "editorHasRenameProvider && editorTextFocus && !editorReadonly && editorTextFocus && neovim.ctrlKeysNormal && neovim.init && neovim.mode != 'insert'"
+    },
+    {
         "key": "space a",
         "command": "acceptSelectedCodeAction",
         "when": "codeActionMenuVisible && editorTextFocus && neovim.ctrlKeysNormal && neovim.init && neovim.mode != 'insert'"

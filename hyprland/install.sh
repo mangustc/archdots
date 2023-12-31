@@ -32,6 +32,7 @@ make --directory $DVORAK_PATH
 sudo mv -vf $DVORAK_PATH/dvorak /usr/local/bin
 sudo cp -vrf $DVORAK_PATH/dvorak.service /etc/systemd/system
 sudo systemctl enable dvorak.service
+sudo systemctl disable dvorak.service
 
 echo ""
 cp -vrf ./kwallet.service $USER_SYSTEMD_PATH
@@ -45,3 +46,7 @@ cp -vrf ./kb-variant-toggle.sh $HYPR_PATH
 chmod +x ./swww-change.sh
 cp -vrf ./swww-change.sh $HYPR_PATH
 cp -vrf ./wallpapers $HYPR_PATH
+
+chmod +x ./waybar-toggle.sh
+cp -vrf ./waybar-toggle.sh $HYPR_PATH
+

@@ -10,6 +10,7 @@ local servers = {
 		},
 	},
 	java_language_server = {},
+	-- jdtls = {},
 }
 
 local on_attach = function(_, bufnr)

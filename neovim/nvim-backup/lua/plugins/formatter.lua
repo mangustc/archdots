@@ -24,6 +24,9 @@ require("formatter").setup({
 		python = {
 			require("formatter.filetypes.python").black,
 		},
+		java = {
+			require("formatter.filetypes.java").clangformat,
+		},
 	},
 })
 

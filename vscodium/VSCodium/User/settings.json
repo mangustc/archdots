@@ -6,7 +6,6 @@
     "editor.fontSize": 18,
     "window.menuBarVisibility": "toggle",
     "workbench.colorTheme": "Catppuccin Mocha",
-    "workbench.iconTheme": "catppuccin-mocha",
     "editor.fontFamily": "'JetBrainsMono Nerd Font', 'monospace', monospace",
     "keyboard.dispatch": "keyCode",
     "redhat.telemetry.enabled": false,
@@ -17,5 +16,8 @@
         "editor.defaultFormatter": "redhat.java",
         "editor.suggest.snippetsPreventQuickSuggestions": false
     },
-    "editor.suggest.selectionMode": "never"
+    "editor.suggest.selectionMode": "never",
+    "explorer.confirmDelete": false,
+    "editor.wordWrap": "on",
+    "editor.cursorSurroundingLines": 9
 }

@@ -14,7 +14,7 @@
         "tray"
       ],
       "custom/launcher": {
-        "format": " ",
+        "format": " ",
         "tooltip": false
       },
       "custom/wall": {
