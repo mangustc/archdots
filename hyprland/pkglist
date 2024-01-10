@@ -5,7 +5,6 @@ grim
 imagemagick
 alsa-utils
 brightnessctl
-kwallet
 gnome-keyring
 polkit-kde-agent
 brightnessctl
