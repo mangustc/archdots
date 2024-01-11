@@ -10,7 +10,6 @@
         "wireplumber",
         "backlight",
         "battery",
-        "custom/powermenu",
         "tray"
       ],
       "custom/launcher": {
@@ -74,11 +73,6 @@
       "temperature": {
         "tooltip": false,
         "format": " {temperatureC}°C"
-      },
-      "custom/powermenu": {
-        "format": "",
-        "on-click": "/usr/bin/wlogout",
-        "tooltip": false
       },
       "tray": {
         "icon-size": 15,
