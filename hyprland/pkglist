@@ -10,7 +10,6 @@ polkit-kde-agent
 brightnessctl
 cpupower
 cpupower-gui
-swww
 qt5-wayland
 qt6-wayland
 xdg-desktop-portal-hyprland

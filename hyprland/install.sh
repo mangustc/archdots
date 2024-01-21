@@ -28,10 +28,9 @@ cp -vrf ./kickoff.toml "$KICKOFF_PATH/config.toml"
 chmod +x ./kb-variant-toggle.sh
 cp -vrf ./kb-variant-toggle.sh $HYPR_PATH
 
-chmod +x ./swww-change.sh
-cp -vrf ./swww-change.sh $HYPR_PATH
-cp -vrf ./wallpapers $HYPR_PATH
+# chmod +x ./swww-change.sh
+# cp -vrf ./swww-change.sh $HYPR_PATH
+# cp -vrf ./wallpapers $HYPR_PATH
 
 chmod +x ./waybar-toggle.sh
 cp -vrf ./waybar-toggle.sh $HYPR_PATH
-
