@@ -4,7 +4,7 @@ if [ ! "$EUID" -ne 0 ]; then
     exit
 fi
 
-yay -S --needed - <./pkglist
+paru -S --needed - <./pkglist
 
-sudo cp -vr ./powertop.service /etc/systemd/system/powertop.service
-sudo systemctl enable powertop.service
+doas cp -vr ./powertop.service /etc/systemd/system/powertop.service
+doas systemctl enable powertop.service

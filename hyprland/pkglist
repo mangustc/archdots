@@ -1,14 +1,11 @@
 hyprland
-kickoff
 slurp
 grim
 imagemagick
 alsa-utils
 brightnessctl
 gnome-keyring
-polkit-kde-agent
 brightnessctl
-cpupower
 cpupower-gui
 qt5-wayland
 qt6-wayland

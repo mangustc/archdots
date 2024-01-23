@@ -4,7 +4,7 @@ if [ ! "$EUID" -ne 0 ]
   exit
 fi
 
-yay -S --needed - < ./pkglist
+paru -S --needed - < ./pkglist
 
 TMUX_PATH=~/.config/tmux
 if [ ! -d $TMUX_PATH ]; then

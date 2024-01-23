@@ -4,7 +4,7 @@ if [ ! "$EUID" -ne 0 ]; then
     exit
 fi
 
-yay -S --needed - <./pkglist
+paru -S --needed - <./pkglist
 
 USER=$(whoami)
 if [ "$(groups $USER | grep audio)" == "" ]; then
