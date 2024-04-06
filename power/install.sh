@@ -6,5 +6,5 @@ fi
 
 paru -S --needed - <./pkglist
 
-doas cp -vr ./powertop.service /etc/systemd/system/powertop.service
-doas systemctl enable powertop.service
+# doas cp -vr ./powertop.service /etc/systemd/system/powertop.service
+doas systemctl enable tlp.service

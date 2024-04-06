@@ -20,14 +20,15 @@ echo ""
 cp -vrf ./hyprland.conf "$HYPR_PATH/hyprland.conf"
 cp -vrf ./mocha.conf "$HYPR_PATH/mocha.conf"
 
-chmod +x ./kbtoggle.sh
-cp -vrf ./kbtoggle.sh $HYPR_PATH
-
-chmod +x ./waybar-toggle.sh
-cp -vrf ./waybar-toggle.sh $HYPR_PATH
-
+chmod +x ./kbmode.sh
+cp -vrf ./kbmode.sh $HYPR_PATH
+chmod +x ./waybarmode.sh
+cp -vrf ./waybarmode.sh $HYPR_PATH
 chmod +x ./perfmode.sh
 cp -vrf ./perfmode.sh $HYPR_PATH
+chmod +x ./resmode.sh
+cp -vrf ./resmode.sh $HYPR_PATH
+chmod +x ./exitmenu.sh
+cp -vrf ./exitmenu.sh $HYPR_PATH
 
 cp -vrf ./style.css $WOFI_PATH
-
