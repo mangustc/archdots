@@ -1,4 +1,5 @@
 require("telescope").setup({})
+require("nvim-tree").setup()
 
 vim.keymap.set("n", "<leader>pf", require("telescope.builtin").find_files, { desc = "Search [F]iles" })
 vim.keymap.set("n", "<leader>pg", require("telescope.builtin").live_grep, { desc = "Search by [G]rep" })
@@ -10,5 +11,6 @@ vim.keymap.set("n", "<leader>b", require("telescope.builtin").buffers, { desc = 
 --     }))
 -- end, { desc = "[/] Fuzzily search in current buffer" })
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
+vim.keymap.set("n", "<leader>pt", "<cmd>NvimTreeToggle<CR>")
 
 pcall(require("telescope").load_extension, "fzf")

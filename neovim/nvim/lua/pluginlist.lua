@@ -160,4 +160,5 @@ return {
     --     end,
     -- }
     { 'ThePrimeagen/vim-be-good' },
+    { 'nvim-tree/nvim-tree.lua' },
 }

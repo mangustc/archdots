@@ -27,6 +27,9 @@ require("formatter").setup({
 		java = {
 			require("formatter.filetypes.java").clangformat,
 		},
+		go = {
+			require("formatter.filetypes.java").goimports,
+		},
 	},
 })
 

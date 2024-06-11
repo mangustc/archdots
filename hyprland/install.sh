@@ -30,5 +30,7 @@ chmod +x ./resmode.sh
 cp -vrf ./resmode.sh $HYPR_PATH
 chmod +x ./exitmenu.sh
 cp -vrf ./exitmenu.sh $HYPR_PATH
+chmod +x ./exitmenu.sh
+cp -vrf ./pipevol.sh $HYPR_PATH
 
 cp -vrf ./style.css $WOFI_PATH
