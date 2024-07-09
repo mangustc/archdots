@@ -1,4 +1,4 @@
-AUTHOR="bmg-c"
+AUTHOR="mangustc"
 
 if [[ $# -eq 1 ]]; then
     cd $1
