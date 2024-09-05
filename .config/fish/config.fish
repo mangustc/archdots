@@ -24,6 +24,7 @@ abbr cp "cp -vr";
 abbr mv "mv -vf";
 abbr t "tldr";
 abbr tree "tree -C";
+abbr ls "ls -lah";
 
 alias clear='clear && printf "\e[31m●\e[0m \e[33m●\e[0m \e[32m●\e[0m \e[36m●\e[0m \e[34m●\e[0m \e[35m●\e[0m \n\n\n" && PF_INFO="ascii title os uptime pkgs" PF_SEP="       " PF_COL1=4 PF_COL2=9 PF_COL3=1 PF_ALIGN="" PF_ASCII="Catppuccin" /usr/local/bin/pfetch-kitties'
 alias yay='paru'

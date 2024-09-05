@@ -1,0 +1,125 @@
+[
+  {
+    // Enter does not confirm completions
+    "context": "Editor && showing_completions",
+    "bindings": {
+      "enter": "editor::Newline"
+    }
+  },
+  {
+    "context": "Editor && !VimWaiting",
+    "bindings": {
+      // System clipboard
+      "ctrl-shift-v": "editor::Paste",
+
+      // LSP
+      "ctrl-[": "editor::GoToDiagnostic",
+      "ctrl-]": "editor::GoToPrevDiagnostic",
+
+      "alt-l": "pane::ActivateNextItem",
+      "alt-h": "pane::ActivatePrevItem",
+      "alt-c": "pane::CloseActiveItem"
+    }
+  },
+  {
+    "context": "Editor && vim_mode == normal && !VimWaiting",
+    "bindings": {
+      // System clipboard
+      //// Linked directry to visual mode space y keybind
+      "space y y": ["workspace::SendKeystrokes", "shift-v space y"],
+      //// Linked directry to visual mode space d keybind
+      "space d d": ["workspace::SendKeystrokes", "shift-v space d"],
+
+      // My specific shortcuts
+      "shift-u": "editor::Redo",
+      "shift-j": "editor::MoveLineDown",
+      "shift-k": "editor::MoveLineUp",
+      "ctrl-f4 ctrl-d": "vim::ScrollDown",
+      "ctrl-f4 ctrl-u": "vim::ScrollUp",
+      "ctrl-d": ["workspace::SendKeystrokes", "ctrl-f4 ctrl-d z z"],
+      "ctrl-u": ["workspace::SendKeystrokes", "ctrl-f4 ctrl-u z z"],
+      "ctrl-f": "editor::Format",
+
+      // Telescope
+      "space p g": "pane::DeploySearch",
+      "space p f": "file_finder::Toggle",
+      "space p t": "workspace::ToggleLeftDock",
+
+      // LSP
+      "space v c a": "editor::ToggleCodeActions",
+      "space v d": "diagnostics::Deploy",
+      "space v r n": "editor::Rename",
+      "space v g d": "editor::GoToDefinition",
+      "space v g r": "editor::FindAllReferences"
+    }
+  },
+  {
+    "context": "Editor && vim_mode == visual && !VimWaiting",
+    "bindings": {
+      // System clipboard
+      "ctrl-f4 space y c": "editor::Copy",
+      "ctrl-f4 space y d": "editor::Delete",
+      "space y": [
+        "workspace::SendKeystrokes",
+        "ctrl-f4 space y c ctrl-f4 space y d u"
+      ],
+      "space d": ["workspace::SendKeystrokes", "ctrl-f4 space y d"],
+
+      // My specific shortcuts
+      "shift-j": "editor::MoveLineDown",
+      "shift-k": "editor::MoveLineUp"
+    }
+  },
+  {
+    "context": "ProjectPanel && not_editing",
+    "bindings": {
+      // Window navigation and Telescope
+      "space p t": "workspace::ToggleLeftDock",
+      "ctrl-w left": ["workspace::ActivatePaneInDirection", "Left"],
+      "ctrl-w right": ["workspace::ActivatePaneInDirection", "Right"],
+      "ctrl-w up": ["workspace::ActivatePaneInDirection", "Up"],
+      "ctrl-w down": ["workspace::ActivatePaneInDirection", "Down"],
+      "ctrl-w ctrl-left": ["workspace::ActivatePaneInDirection", "Left"],
+      "ctrl-w ctrl-right": ["workspace::ActivatePaneInDirection", "Right"],
+      "ctrl-w ctrl-up": ["workspace::ActivatePaneInDirection", "Up"],
+      "ctrl-w ctrl-down": ["workspace::ActivatePaneInDirection", "Down"],
+      "ctrl-w h": ["workspace::ActivatePaneInDirection", "Left"],
+      "ctrl-w l": ["workspace::ActivatePaneInDirection", "Right"],
+      "ctrl-w k": ["workspace::ActivatePaneInDirection", "Up"],
+      "ctrl-w j": ["workspace::ActivatePaneInDirection", "Down"],
+      "ctrl-w ctrl-h": ["workspace::ActivatePaneInDirection", "Left"],
+      "ctrl-w ctrl-l": ["workspace::ActivatePaneInDirection", "Right"],
+      "ctrl-w ctrl-k": ["workspace::ActivatePaneInDirection", "Up"],
+      "ctrl-w ctrl-j": ["workspace::ActivatePaneInDirection", "Down"]
+    }
+  },
+  {
+    "context": "Editor && VimControl && !VimWaiting && !menu",
+    "bindings": {
+      // Window navigation
+      "ctrl-w ctrl-left": ["workspace::ActivatePaneInDirection", "Left"],
+      "ctrl-w ctrl-right": ["workspace::ActivatePaneInDirection", "Right"],
+      "ctrl-w ctrl-up": ["workspace::ActivatePaneInDirection", "Up"],
+      "ctrl-w ctrl-down": ["workspace::ActivatePaneInDirection", "Down"]
+    }
+  }
+  // {
+  //   // Space leader key, normal mode press binds
+  //   "context": "Editor && vim_mode == normal && vim_operator == space",
+  //   "bindings": {
+  //     "space y y": ["vim::CurrentLine", "editor::Copy"]
+  //   }
+  // }
+  // {
+  //   "context": "Editor && vim_mode == normal && !VimWaiting",
+  //   "bindings": {
+  //     "space p g": "pane::DeploySearch"
+  //   }
+  // }
+  // {
+  //   "context": "Editor && vim_mode == visual && !VimWaiting && !VimObject",
+  //   "bindings": {
+  //     "space p g": "vim::ToggleVisual"
+  //   }
+  // }
+]

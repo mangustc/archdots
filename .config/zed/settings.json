@@ -1,0 +1,43 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run the `open default settings` command
+// from the command palette or from `Zed` application menu.
+{
+  "vim_mode": true,
+  "buffer_font_family": "FiraCodeNF-Reg",
+  "ui_font_size": 16,
+  "buffer_font_size": 16,
+  "theme": {
+    "mode": "dark",
+    "light": "Catppuccin Latte",
+    "dark": "Catppuccin Mocha"
+  },
+  "features": {
+    "copilot": false
+  },
+  "terminal": {
+    "detect_venv": {
+      "on": {
+        "directories": [".env", "env", ".venv", "venv"],
+        "activate_script": "fish"
+      }
+    },
+    "shell": {
+      "program": "fish"
+    }
+  },
+  "vim": {
+    "use_system_clipboard": "never"
+  },
+  "vertical_scroll_margin": 9,
+  "relative_line_numbers": true,
+  "tabs": {
+    "git_status": true
+  },
+  "soft_wrap": "editor_width",
+  "wrap_guides": [80]
+}
