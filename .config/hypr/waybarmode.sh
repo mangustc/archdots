@@ -3,6 +3,6 @@
 if [ "$(pidof waybar)" = "" ]; then
     waybar
 else
-    killall waybar
+    pkill -f waybar
 fi
 
