@@ -7,4 +7,4 @@ fi
 
 echo "Mirrors are now being sorted. Please wait..."
 
-doas rate-mirrors --allow-root --disable-comments --save /etc/pacman.d/mirrorlist arch
+sudo rate-mirrors --allow-root --disable-comments --save /etc/pacman.d/mirrorlist arch

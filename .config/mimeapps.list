@@ -117,3 +117,4 @@ audio/vnd.wave=mpv.desktop
 audio/x-ms-wma=mpv.desktop
 audio/x-wavpack=mpv.desktop
 audio/webm=mpv.desktop
+x-scheme-handler/postman=Postman.desktop

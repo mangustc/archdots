@@ -176,9 +176,10 @@ require('lazy').setup({
       local servers = {
         -- clangd = {},
         gopls = {},
-        -- pyright = {},
+        pyright = {},
         rust_analyzer = {},
         eslint = {},
+        -- tsserver = {},
         templ = {},
         htmx = {},
         html = {},
@@ -202,6 +203,7 @@ require('lazy').setup({
         'stylua',
         'gofumpt',
         'mdformat',
+        'prettier',
       })
       require('mason-tool-installer').setup { ensure_installed = ensure_installed }
 
@@ -243,6 +245,8 @@ require('lazy').setup({
         go = { 'gofumpt' },
         templ = { 'templ', 'fmt' },
         markdown = { 'mdformat' },
+        jsx = { 'prettier' },
+        javascriptreact = { 'prettier' },
       },
     },
   },
