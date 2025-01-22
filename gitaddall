@@ -1,5 +1,0 @@
-#!/bin/bash
-
-git add -A
-git restore --staged home/.local/bin/nethandler
-git restore --staged home/.local/lib/nethandler

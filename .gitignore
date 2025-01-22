@@ -1,2 +1,2 @@
-.config/zed/.tmp*
-.config/fish/fish_variables*
+home/.local/bin/nethandler
+home/.local/lib/nethandler
