@@ -1,0 +1,4 @@
+#!/bin/bash
+
+cpuperf performance
+exec gamemoderun "$@"

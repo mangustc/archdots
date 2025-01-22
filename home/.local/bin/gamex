@@ -1,0 +1,10 @@
+#!/bin/bash
+
+# if [ "$1" = "lutris" ] || [ "$1" = "" ]; then
+#     startx /home/ivan/.local/share/x11/xinitrc-lutris
+# elif [ "$1" = "steam" ]; then
+#     startx /home/ivan/.local/share/x11/xinitrc-steam
+# else
+#     echo "Usage: $0 [lutris|steam]. Default: lutris"
+# fi
+startx /home/ivan/.local/share/x11/xinitrc-gamex

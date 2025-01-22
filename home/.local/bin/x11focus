@@ -1,0 +1,33 @@
+#!/bin/bash
+
+if [ "$1" = "random-focus" ]; then
+	window_ids=$(xdotool search --onlyvisible --role "")
+	ids_array=($window_ids)
+	count=${#ids_array[@]}
+	if [ $count -eq 0 ]; then
+		echo "No visible windows fonud."
+		exit 1
+	fi
+
+	random_index=$((RANDOM % count))
+	random_id=${ids_array[$random_index]}
+	echo ${random_id}
+elif [ "$1" = "choose-focus" ]; then
+	WINDOW_ID="$(xdotool search --onlyvisible --role "" | dmenu)"
+
+	xdotool windowfocus ${WINDOW_ID}
+	xdotool windowraise ${WINDOW_ID}
+elif [ "$1" = "close-focused" ]; then
+	WINDOW_ID="$(xdotool getwindowfocus)"
+	xdotool windowclose ${WINDOW_ID}
+	if [ $? -ne 0 ]; then
+		xdotoop windowkill ${WINDOW_ID}
+	fi
+elif [ "$1" = "fake-fullscreen" ]; then
+	WINDOW_ID="$(xdotool getwindowfocus)"
+	read WIDTH HEIGHT <<<$(xrandr | grep '*' | awk '{print $1}' | head -n 1 | awk -Fx '{print $1, $2}')
+	xdotool windowmove ${WINDOW_ID} 0 0
+	xdotool windowsize ${WINDOW_ID} ${WIDTH} ${HEIGHT}
+else
+	echo "Wrong command"
+fi

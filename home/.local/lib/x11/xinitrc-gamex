@@ -1,0 +1,11 @@
+export XDG_SESSION_TYPE=x11
+
+nvidia-settings --config=~/.local/share/x11/nvidia-settings-rc -l
+setxkbmap -layout us -option terminate:ctrl_alt_bksp
+xinput set-prop "Compx 2.4G Wireless Receiver" "libinput Accel Profile Enabled" 0 1 0
+xinput set-prop "Compx 2.4G Wireless Receiver" "libinput Accel Speed" -0.75
+xset -dpms
+xset s off
+xbindkeys
+
+exec keepalive
