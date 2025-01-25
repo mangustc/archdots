@@ -4,6 +4,7 @@ SOURCE_DIR=""
 DEST_DIR="${HOME}/archdots/root"
 
 mkdir -p "${DEST_DIR}/etc"
+mkdir -p "${DEST_DIR}/etc/udev"
 
 rm -vrf "${DEST_DIR}/etc/mkinitcpio.conf"
 cp -vr "${SOURCE_DIR}/etc/mkinitcpio.conf" "${DEST_DIR}/etc"
@@ -19,6 +20,9 @@ cp -vr "${SOURCE_DIR}/etc/pacman.conf" "${DEST_DIR}/etc"
 
 rm -vrf "${DEST_DIR}/etc/paru.conf"
 cp -vr "${SOURCE_DIR}/etc/paru.conf" "${DEST_DIR}/etc"
+
+rm -vrf "${DEST_DIR}/etc/udev/rules.d"
+cp -vr "${SOURCE_DIR}/etc/udev/rules.d" "${DEST_DIR}/etc/udev"
 
 mkdir -p "${DEST_DIR}/boot"
 mkdir -p "${DEST_DIR}/boot/loader"
