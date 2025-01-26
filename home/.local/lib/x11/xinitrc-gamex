@@ -7,4 +7,4 @@ xinput set-prop "Compx 2.4G Wireless Receiver" "libinput Accel Speed" -0.75
 xset -dpms
 xset s off
 
-exec xbindkeys -n -f ~/.local/lib/x11/xbindkeysrc
+exec xbindkeys -f ~/.local/lib/x11/xbindkeysrc -n
