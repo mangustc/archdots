@@ -6,6 +6,6 @@ fi
 
 if [[ $- == *i* ]]; then
 	exec fish
-fi
+else
 	PATH=${PATH}:~/.local/bin:~/go/bin
 fi
