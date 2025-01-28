@@ -3,8 +3,12 @@
 SOURCE_DIR=""
 DEST_DIR="${HOME}/archdots/root"
 
+rm -rfv "${DEST_DIR}/etc"
+rm -rfv "${DEST_DIR}/boot"
 mkdir -p "${DEST_DIR}/etc"
 mkdir -p "${DEST_DIR}/etc/udev"
+mkdir -p "${DEST_DIR}/boot"
+mkdir -p "${DEST_DIR}/boot/loader"
 
 rm -vrf "${DEST_DIR}/etc/mkinitcpio.conf"
 cp -vr "${SOURCE_DIR}/etc/mkinitcpio.conf" "${DEST_DIR}/etc"
@@ -21,11 +25,14 @@ cp -vr "${SOURCE_DIR}/etc/pacman.conf" "${DEST_DIR}/etc"
 rm -vrf "${DEST_DIR}/etc/paru.conf"
 cp -vr "${SOURCE_DIR}/etc/paru.conf" "${DEST_DIR}/etc"
 
+rm -vrf "${DEST_DIR}/etc/tlp.conf"
+cp -vr "${SOURCE_DIR}/etc/tlp.conf" "${DEST_DIR}/etc"
+
 rm -vrf "${DEST_DIR}/etc/udev/rules.d"
 cp -vr "${SOURCE_DIR}/etc/udev/rules.d" "${DEST_DIR}/etc/udev"
 
-mkdir -p "${DEST_DIR}/boot"
-mkdir -p "${DEST_DIR}/boot/loader"
+rm -vrf "${DEST_DIR}/etc/sysctl.d"
+cp -vr "${SOURCE_DIR}/etc/sysctl.d" "${DEST_DIR}/etc"
 
 rm -vrf "${DEST_DIR}/boot/loader/loader.conf"
 cp -vr "${SOURCE_DIR}/boot/loader/loader.conf" "${DEST_DIR}/boot/loader"

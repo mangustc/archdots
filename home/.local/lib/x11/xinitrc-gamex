@@ -1,10 +1,12 @@
 export XDG_SESSION_TYPE=x11
 
-nvidia-settings --config=~/.local/lib/x11/nvidia-settings-rc -l
+X11_CONFIG_DIR=~/.local/lib/x11
+
+nvidia-settings --config=${X11_CONFIG_DIR}/nvidia-settings-rc -l
 setxkbmap -layout us -option terminate:ctrl_alt_bksp
 xinput set-prop "Compx 2.4G Wireless Receiver" "libinput Accel Profile Enabled" 0 1 0
 xinput set-prop "Compx 2.4G Wireless Receiver" "libinput Accel Speed" -0.75
 xset -dpms
 xset s off
 
-exec xbindkeys -f ~/.local/lib/x11/xbindkeysrc -n
+exec xbindkeys -f ${X11_CONFIG_DIR}/xbindkeysrc -n
