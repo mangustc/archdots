@@ -1,5 +1,14 @@
 #!/bin/bash
 
+which paru >/dev/null
+if [ $? -ne 1 ]; then
+	echo "Saving paru package list"
+	paru -Qeq >"${HOME}/archdots/packages"
+else
+	echo "Saving pacman package list"
+	pacman -Qeq >"${HOME}/archdots/packages"
+fi
+
 SOURCE_DIR=""
 DEST_DIR="${HOME}/archdots/root"
 
