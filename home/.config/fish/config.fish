@@ -1,4 +1,5 @@
 set -gx PATH $PATH ~/.local/bin ~/go/bin
+set -gx PAGER bat
 fish_config theme choose Catppuccin\ Mocha
 set fzf_fd_opts --hidden --no-ignore --max-depth 5
 set fzf_preview_dir_cmd eza --time-style relative -lA
