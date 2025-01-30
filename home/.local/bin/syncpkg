@@ -1,0 +1,10 @@
+#!/bin/bash
+
+# Uninstall all packages not included in packages file
+paru -R $(paru -Qeq | comm -23 - ${HOME}/archdots/packages)
+
+# Delete orphans
+paru -R $(paru -Qtdq)
+
+# Install all packages in packages file
+paru -S --needed - <packages
