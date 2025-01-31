@@ -1,6 +1,6 @@
 #!/bin/bash
 
-SOURCE_DIR="${HOME}/archdots/home/.config"
+SOURCE_DIR="${HOME}/dotfiles/home/.config"
 DEST_DIR="${HOME}/.config"
 mkdir -p ${DEST_DIR}
 for FILEPATH in ${SOURCE_DIR}/*; do
@@ -10,7 +10,7 @@ for FILEPATH in ${SOURCE_DIR}/*; do
     echo -e "Linked ${SOURCE_DIR}/${FILENAME} to ${DEST_DIR}/${FILENAME}\n"
 done
 
-SOURCE_DIR="${HOME}/archdots/home/.local"
+SOURCE_DIR="${HOME}/dotfiles/home/.local"
 DEST_DIR="${HOME}/.local"
 mkdir -p ${DEST_DIR}
 for FILEPATH in ${SOURCE_DIR}/*; do
@@ -20,7 +20,7 @@ for FILEPATH in ${SOURCE_DIR}/*; do
     echo -e "Linked ${SOURCE_DIR}/${FILENAME} to ${DEST_DIR}/${FILENAME}\n"
 done
 
-SOURCE_DIR="${HOME}/archdots/home"
+SOURCE_DIR="${HOME}/dotfiles/home"
 DEST_DIR="${HOME}"
 
 for FILEPATH in ${SOURCE_DIR}/.*; do
