@@ -3,14 +3,14 @@
 which paru >/dev/null
 if [ $? -ne 1 ]; then
 	echo "Saving paru package list"
-	paru -Qeq >"${HOME}/archdots/packages"
+	paru -Qeq >"${HOME}/dotfiles/packages"
 else
 	echo "Saving pacman package list"
-	pacman -Qeq >"${HOME}/archdots/packages"
+	pacman -Qeq >"${HOME}/dotfiles/packages"
 fi
 
 SOURCE_DIR=""
-DEST_DIR="${HOME}/archdots/root"
+DEST_DIR="${HOME}/dotfiles/root"
 
 rm -rfv "${DEST_DIR}/etc"
 rm -rfv "${DEST_DIR}/boot"
